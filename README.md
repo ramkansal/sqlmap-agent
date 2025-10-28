@@ -9,21 +9,10 @@ An AI-powered agent for running sqlmap scans using natural language commands.
 - 🐳 Docker-ready (no allowlist restrictions)
 - ⚡ Simple and flexible flag passing
 
-## Quickstart
+## Quick Usage (Recommended)
 
 ```bash
-# 1) Install system dependencies
-#    apt-get install -y sqlmap  # or pipx install sqlmap
-
-# 2) Install Python dependencies
-pip install -e .
-
-# 3) Set environment variables
-export OPENAI_API_KEY=sk-...
-export LLM_MODEL=gpt-5-nano  # optional
-
-# 4) Run the agent
-python -m src.sqlmap_agent.run "Test http://testphp.vulnweb.com/artists.php?artist=1 with level 5 and risk 3"
+docker run --rm -it -e OPENAI_API_KEY=$env:OPENAI_API_KEY ramkansal/sqlmap-agent:latest
 ```
 
 ## How It Works
