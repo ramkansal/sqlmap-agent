@@ -1,0 +1,18 @@
+[project]
+name = "sqlmap-agent"
+version = "0.1.0"
+description = "Agentic wrapper around sqlmap with safe defaults"
+requires-python = ">=3.10"
+dependencies = [
+  "langchain>=0.3.0",
+  "langchain-core>=0.3.0",
+  "langchain-community>=0.3.0",
+  "langgraph>=0.2.27",
+  "langchain-openai>=0.2.0",   
+  "pydantic>=2.7",
+  "python-dotenv>=1.0.1",
+  "uvloop; sys_platform != 'win32'",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
