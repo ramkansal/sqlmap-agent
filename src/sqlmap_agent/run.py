@@ -42,29 +42,29 @@ Environment variables:
 
     
     if not os.getenv("OPENAI_API_KEY"):
-        print("❌ Error: OPENAI_API_KEY environment variable is not set", file=sys.stderr)
+        print("Error: OPENAI_API_KEY environment variable is not set", file=sys.stderr)
         print("\nSet it with: export OPENAI_API_KEY=sk-your-key-here", file=sys.stderr)
         return 1
 
     try:
         
         if args.verbose:
-            print(f"🤖 Initializing sqlmap-agent...")
-            print(f"📝 Query: {args.query}\n")
+            print(f"Initializing sqlmap-agent...")
+            print(f"Query: {args.query}\n")
         
         executor = make_agent()
         result = ask(executor, args.query)
         
         if args.verbose:
             print("\n" + "=" * 60)
-            print("📊 Result:")
+            print("Result:")
             print("=" * 60)
         
         print(json.dumps(result, indent=2, default=str))
         return 0
         
     except Exception as e:
-        print(f"❌ Error: {e}", file=sys.stderr)
+        print(f"Error: {e}", file=sys.stderr)
         if args.verbose:
             import traceback
             traceback.print_exc()
