@@ -12,7 +12,11 @@ An AI-powered agent for running sqlmap scans using natural language commands.
 ## Quick Usage (Recommended)
 
 ```bash
+#For Windows
 docker run --rm -it -e OPENAI_API_KEY=$env:OPENAI_API_KEY ramkansal/sqlmap-agent:latest
+
+#For Linux
+docker run --rm -it -e OPENAI_API_KEY=$OPENAI_API_KEY ramkansal/sqlmap-agent:latest
 ```
 
 ## How It Works
