@@ -17,6 +17,20 @@ docker run --rm -it -e OPENAI_API_KEY=$env:OPENAI_API_KEY ramkansal/sqlmap-agent
 
 #For Linux
 docker run --rm -it -e OPENAI_API_KEY=$OPENAI_API_KEY ramkansal/sqlmap-agent:latest
+
+
+# OR BUILD YOUR OWN
+
+git clone https://github.com/ramkansal/sqlmap-agent
+cd sqlmap-agent
+
+docker build -t sqlmap-agent .
+
+#For Windows
+docker run --rm -it -e OPENAI_API_KEY=$env:OPENAI_API_KEY sqlmap-agent:latest
+
+#For Linux
+docker run --rm -it -e OPENAI_API_KEY=$OPENAI_API_KEY sqlmap-agent:latest
 ```
 
 ## How It Works
